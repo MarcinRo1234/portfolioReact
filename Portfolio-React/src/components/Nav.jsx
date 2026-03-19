@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import NavElement from "./NavElement";
+import { navItems } from "../util/data";
 
 const NavHeader = styled.div`
     max-width: 1600px;
@@ -26,24 +28,8 @@ const NavMenuList = styled.ul`
 `
     
 
-const NamMenuListElementButton = styled.button`
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    font-size: 1rem;
-    transition: font-size 0.3s;
-    cursor: pointer;
-    font-weight: 500;
-    &:hover{
-        transform: translateY(-1px);
-        box-shadow: 0 6px 10px rgba(188, 196, 235, 0.3)
-    }
-    &:active{
-        transform: translateY(0)
-    }
 
-`
+
 
 export default function Nav(){
     return(
@@ -51,10 +37,7 @@ export default function Nav(){
             <NavMenu>
                 <NavMenuLogo>Logo</NavMenuLogo>
                 <NavMenuList>
-                    <li class="nav-menu__list-element"><NamMenuListElementButton>About ME</NamMenuListElementButton></li>
-                    <li class="nav-menu__list-element"><NamMenuListElementButton>Career</NamMenuListElementButton></li>
-                    <li class="nav-menu__list-element"><NamMenuListElementButton>Skills</NamMenuListElementButton></li>
-                    <li class="nav-menu__list-element"><NamMenuListElementButton>Portfolio</NamMenuListElementButton></li>
+                    {navItems.map((Item) => <NavElement key={Item.title} {...Item}/>)}
                 </NavMenuList>
                 <div class="changeMode"><span>change theme</span></div>
             </NavMenu>
