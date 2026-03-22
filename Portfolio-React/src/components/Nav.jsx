@@ -37,7 +37,7 @@ export default function Nav(){
             <NavMenu>
                 <NavMenuLogo>Logo</NavMenuLogo>
                 <NavMenuList>
-                    {navItems.map((Item) => <NavElement key={Item.title} {...Item}/>)}
+                    
                 </NavMenuList>
                 <div class="changeMode"><span>change theme</span></div>
             </NavMenu>
