@@ -4,9 +4,9 @@ const BCwrapper = styled.div`
   min-height: 300px;
   margin: 10px auto;
   border-radius: var(--main-border-radius);
-  border: 1px solid #eceadb;
+  border: 1px solid rgb(138, 43, 226);
   background-color: #3b403e;
-  box-shadow: 12px -7px 48px -30px rgba(249, 249, 249, 1);
+  box-shadow: 12px -7px 48px -30px rgb(138, 43, 226);
 `;
 const BCwrapperContent = styled.div`
   display: flex;
@@ -27,11 +27,18 @@ const BCbutton = styled.button`
   border: none;
   border-radius: 8px;
   padding: 7px 12px;
+  &:hover{
+        transform: translateY(-1px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3)
+    }
+    &:active{
+        transform: translateY(0)
+    }
 `;
 const BCh2 = styled.h2`
   margin-bottom: 50px;
   letter-spacing: 2px;
-  border-bottom: 2px solid #8a2be2;
+  border-bottom: 2px solid rgb(138, 43, 226);
 `;
 const SectionImg = styled.section`
   height: 300px;
