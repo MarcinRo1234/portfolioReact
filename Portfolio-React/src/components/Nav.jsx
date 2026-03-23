@@ -6,6 +6,7 @@ import { navItems} from "../util/data"
 const NavHeader = styled.div`
     max-width: 1600px;
     margin: 5px auto;
+    margin-bottom: 20px;
 `
 const NavMenu = styled.nav`
     margin-top: 25px;
@@ -29,6 +30,9 @@ const NavMenuList = styled.ul`
 `
 const NavMenuContact = styled.div`
     margin-right:20px;
+    &i:hover{
+        transition: translate
+    }
 
 `
     

@@ -1,4 +1,4 @@
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
 import BusinessCard from "./components/BusinessCard";
 
 function App() {

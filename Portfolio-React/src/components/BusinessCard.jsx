@@ -21,16 +21,25 @@ const BCwrapperContentText = styled.section`
   margin: 10px;
 `;
 const BCbutton = styled.button`
-  max-width: 300px;
-  max-height: 200px;
-  padding: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 30px;
+  background: #8a2be2;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
 `;
 const BCh2 = styled.h2`
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   letter-spacing: 2px;
+  border-bottom: 2px solid #8a2be2;
 `;
+const SectionImg = styled.section`
+  height: 300px;
+  width: 300px;
+  border-radius: 50px 7px 68px 7px;
+  border: 5px dotted #8a2be2;
+`
+
 
 export default function BusinessCard({title, description, buttonText, imgSrc, imgAlt}) {
   return (
@@ -39,11 +48,11 @@ export default function BusinessCard({title, description, buttonText, imgSrc, im
         <section className="wrapper-content__text">
           <BCh2>{title}</BCh2>
           <p>{description}</p>
-          <BCbutton>{buttonText}</BCbutton>
+          <BCbutton type="button">{buttonText}</BCbutton>
         </section>
-        <section className="wrapper-content__photo">
+        <SectionImg>
           <img src={imgSrc} alt={imgAlt} />
-        </section>
+        </SectionImg>
       </BCwrapperContent>
     </BCwrapper>
   );
