@@ -1,5 +1,5 @@
-import BusinessCard from "./components/BusinessCard";
 import Nav from "./components/nav";
+import BusinessCard from "./components/BusinessCard";
 
 function App() {
   
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Nav />
-      <BusinessCard />
+      <BusinessCard title="Dev name" description="About developer" buttonText="Contact" imgAlt="devFoto" />
     </>
   )
 }

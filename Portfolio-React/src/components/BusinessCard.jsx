@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 const BCwrapper = styled.div`
   max-width: 1000px;
-  min-height: 400px;
+  min-height: 300px;
   margin: 10px auto;
   border-radius: var(--main-border-radius);
   border: 1px solid #eceadb;
@@ -12,7 +12,7 @@ const BCwrapperContent = styled.div`
   display: flex;
   // flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly;    
   //   background-color: #434a47;
 
   margin: 20px;
@@ -32,17 +32,17 @@ const BCh2 = styled.h2`
   letter-spacing: 2px;
 `;
 
-export default function BusinessCard() {
+export default function BusinessCard({title, description, buttonText, imgSrc, imgAlt}) {
   return (
     <BCwrapper>
       <BCwrapperContent>
         <section className="wrapper-content__text">
-          <BCh2>Developer name</BCh2>
-          <p>Developer description</p>
-          <BCbutton>About developer</BCbutton>
+          <BCh2>{title}</BCh2>
+          <p>{description}</p>
+          <BCbutton>{buttonText}</BCbutton>
         </section>
         <section className="wrapper-content__photo">
-          <img src="" alt="dev foto" />
+          <img src={imgSrc} alt={imgAlt} />
         </section>
       </BCwrapperContent>
     </BCwrapper>

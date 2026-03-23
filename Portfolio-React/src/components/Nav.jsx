@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import NavElement from "./NavElement";
-import { navItems } from "../util/data";
+import { navItems} from "../util/data"
+
 
 const NavHeader = styled.div`
     max-width: 1600px;
@@ -26,6 +27,10 @@ const NavMenuList = styled.ul`
     list-style: none;
     width: 500px;
 `
+const NavMenuContact = styled.div`
+    margin-right:20px;
+
+`
     
 
 
@@ -37,9 +42,9 @@ export default function Nav(){
             <NavMenu>
                 <NavMenuLogo>Logo</NavMenuLogo>
                 <NavMenuList>
-                    
+                    {navItems.map((item) => <NavElement key={item.title} {...item} />)}
                 </NavMenuList>
-                <div class="changeMode"><span>change theme</span></div>
+                <NavMenuContact><span><i className="fa-regular fa-envelope"></i> Contact</span></NavMenuContact>
             </NavMenu>
         </NavHeader>
     )
