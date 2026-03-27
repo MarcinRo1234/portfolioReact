@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+
 const BCwrapper = styled.div`
   max-width: 1000px;
   min-height: 300px;
@@ -40,7 +41,7 @@ const BCh2 = styled.h2`
   letter-spacing: 2px;
   border-bottom: 2px solid rgb(138, 43, 226);
 `;
-const SectionImg = styled.section`
+const Img = styled.img`
   height: 300px;
   width: 300px;
   border-radius: 50px 7px 68px 7px;
@@ -57,9 +58,9 @@ export default function BusinessCard({title, description, buttonText, imgSrc, im
           <p>{description}</p>
           <BCbutton type="button">{buttonText}</BCbutton>
         </section>
-        <SectionImg>
-          <img src={imgSrc} alt={imgAlt} />
-        </SectionImg>
+        <section>
+          <Img src={imgSrc} alt={imgAlt} />
+        </section>
       </BCwrapperContent>
     </BCwrapper>
   );
