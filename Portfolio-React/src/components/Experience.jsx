@@ -29,8 +29,6 @@ const Header = styled.h2`
 export default function Experience() {
     const [selectedTopic, setSelectedTopic] = useState()
     function handleSelect(selectedButton) {
-    //selectedButton => 'components', 'jsx', 'props', 'state'
-    // console.log(selectedButton)
     setSelectedTopic(selectedButton)
   }
 
@@ -46,15 +44,15 @@ export default function Experience() {
         <DivWrapper>
             <Header>Experience</Header>
             <SectionContainer>
-                <aside style={{display:"flex", flexDirection: "start"}}>
+                <aside>
                     <Tabs>
                         <TabButton isSelected={selectedTopic === 'millennium'} onClick={() => handleSelect('millennium')}>millennium</TabButton>
                         <TabButton isSelected={selectedTopic === 'pkobp'} onClick={() => handleSelect('pkobp')}>pkobp</TabButton>
                     </Tabs>
                 </aside>
-                
+                {tabContent}
             </SectionContainer>
-            {tabContent}
+            
 
         </DivWrapper>
     )
