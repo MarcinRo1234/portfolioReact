@@ -26,11 +26,12 @@ const BCbutton = styled.button`
   margin-top: 30px;
   background: #8a2be2;
   border: none;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   padding: 7px 12px;
   &:hover{
         transform: translateY(-1px);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3)
+        
     }
     &:active{
         transform: translateY(0)
@@ -43,7 +44,7 @@ const BCh2 = styled.h2`
 `;
 const Img = styled.img`
   height: 300px;
-  width: 300px;
+  width: 350px;
   border-radius: 50px 7px 68px 7px;
   border: 5px dotted #8a2be2;
 `
@@ -59,7 +60,7 @@ export default function BusinessCard({title, description, buttonText, imgSrc, im
           <BCbutton type="button">{buttonText}</BCbutton>
         </section>
         <section>
-          <Img src={imgSrc} alt={imgAlt} />
+          <Img src={imgSrc} alt={imgAlt} loading="lazy"/>
         </section>
       </BCwrapperContent>
     </BCwrapper>

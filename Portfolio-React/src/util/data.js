@@ -17,5 +17,10 @@ export const experience = {
         header: "PKOBP",
         description: "chodźmy do Rossmana na zakupy",
         years: "bur bur"
+    },
+    avit: {
+        header: "PKOBP",
+        description: "chodźmy do Rossmana na zakupy",
+        years: "bur bur"
     }
 }

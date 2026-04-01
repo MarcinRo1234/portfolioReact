@@ -16,15 +16,28 @@ const DivWrapper = styled.div`
 `
 const SectionContainer = styled.section`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    // margin: 10px 20px;
+    border-right: 5px solid rgb(138, 43, 226);
+    // border-bottom: 5px solid rgb(138, 43, 226);
 `
 const Header = styled.h2`
     padding: 5px 10px;
     border-left: 5px solid rgb(138, 43, 226);
+    border-bottom: 5px solid rgb(138, 43, 226)
 
 `
-
+const Aside = styled.aside`
+    border-right: 5px solid rgb(138, 43, 226);
+    width: 30%
+`
+const Div = styled.div`
+    width: 70%;
+    margin-left: 15px;
+    
+`
 
 export default function Experience() {
     const [selectedTopic, setSelectedTopic] = useState()
@@ -32,7 +45,7 @@ export default function Experience() {
     setSelectedTopic(selectedButton)
   }
 
-    let tabContent = <p>Click button to see</p>
+    let tabContent = <p>Select button</p>
     if (selectedTopic) {
         tabContent = (<div>
             <h3>{experience[selectedTopic].header}</h3>
@@ -44,13 +57,16 @@ export default function Experience() {
         <DivWrapper>
             <Header>Experience</Header>
             <SectionContainer>
-                <aside>
+                <Aside>
                     <Tabs>
                         <TabButton isSelected={selectedTopic === 'millennium'} onClick={() => handleSelect('millennium')}>millennium</TabButton>
                         <TabButton isSelected={selectedTopic === 'pkobp'} onClick={() => handleSelect('pkobp')}>pkobp</TabButton>
                     </Tabs>
-                </aside>
-                {tabContent}
+                </Aside>
+                <Div>
+                    {tabContent}
+
+                </Div>
             </SectionContainer>
             
 
