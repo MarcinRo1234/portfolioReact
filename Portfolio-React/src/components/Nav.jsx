@@ -19,6 +19,9 @@ const NavMenu = styled.nav`
     border-radius: 10px;
 `
 const NavMenuLogo = styled.div`
+
+
+    
 `
 const NavMenuList = styled.ul`
     display: flex;
@@ -30,8 +33,19 @@ const NavMenuList = styled.ul`
 `
 const NavMenuContact = styled.div`
     margin-right:20px;
-
-`
+    &:hover{
+        transform: translateY(-1px);
+        // box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3)
+    }
+    &:active{
+        transform: translateY(0)
+    }
+    i {
+        
+    &:hover{
+        transform: translateY(-5px);
+    }
+   `
     
 
 

@@ -31,7 +31,9 @@ const Header = styled.h2`
 `
 const Aside = styled.aside`
     border-right: 5px solid rgb(138, 43, 226);
-    width: 30%
+    width: 30%;
+    display: flex;
+    justify-content: center;
 `
 const Div = styled.div`
     width: 70%;
