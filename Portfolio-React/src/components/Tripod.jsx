@@ -5,7 +5,11 @@ const DivWrapper = styled.div`
   margin: 5px auto;
   margin-bottom: 40px;
 //   background-color: blueviolet;
-`;
+`
+const Section = styled.section`
+  border-radius: 5px;
+
+`
 const H2 = styled.h2`
   text-align: center;
   margin-bottom: 10px;
@@ -24,6 +28,7 @@ const Li = styled.li`
     padding: 5px 10px;
     box-shadow: 12px -7px 48px -30px rgb(138, 43, 226);
     border: 1px solid rgb(138, 43, 226);
+    border-radius: 5px;
 `
 const H3 = styled.h3`
   font-size: 20px;
@@ -44,18 +49,18 @@ const Button = styled.button`
   color: rgb(234, 234, 234);
   font-weight: 700;
   transition: 0.6s;
-  box-shadow: 0px 0px 60px #1f4c65;
+  box-shadow: 0px 0px 60px #85157b;
 //   -webkit-box-reflect: below 10px
 //     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   &:active {
     scale: 0.92;
   }
   &:hover {
-    background: rgb(2, 29, 78);
+    background: rgb(134, 4, 134);
     background: linear-gradient(
       270deg,
       rgba(2, 29, 78, 0.681) 0%,
-      rgba(31, 215, 232, 0.873) 60%
+      rgba(134, 28, 148, 0.87) 60%
     );
     color: rgb(4, 4, 38);
   }
@@ -66,7 +71,7 @@ export default function Tripod() {
       <H2>Lorem korem dolorem prolem</H2>
       <UL>
         <Li>
-          <div className="section_box">
+          <Section>
             <picture></picture>
             <div className="section_box__content">
               <H3>Lorem, ipsum dolor.</H3>
@@ -75,7 +80,7 @@ export default function Tripod() {
             <div className="section_box__btns">
               <Button>Lorem</Button>
             </div>
-          </div>
+          </Section>
         </Li>
         <li>
           <div className="section_box">

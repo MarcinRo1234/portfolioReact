@@ -20,17 +20,17 @@ const SectionContainer = styled.section`
     align-items: center;
     width: 100%;
     // margin: 10px 20px;
-    border-right: 5px solid rgb(138, 43, 226);
+    border-right: 2px solid rgb(138, 43, 226);
     // border-bottom: 5px solid rgb(138, 43, 226);
 `
 const Header = styled.h2`
     padding: 5px 10px;
-    border-left: 5px solid rgb(138, 43, 226);
-    border-bottom: 5px solid rgb(138, 43, 226)
+    border-left: 2px solid rgb(138, 43, 226);
+    border-bottom: 2px solid rgb(138, 43, 226)
 
 `
 const Aside = styled.aside`
-    border-right: 5px solid rgb(138, 43, 226);
+    border-right: 2px solid rgb(138, 43, 226);
     width: 30%;
     display: flex;
     justify-content: center;
